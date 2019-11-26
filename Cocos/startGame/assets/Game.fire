@@ -17,7 +17,7 @@
         "__id__": 2
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [],
     "_prefab": null,
@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.5530278262518065,
-      "y": 0.5530278262518065,
+      "x": 0.9805880549342038,
+      "y": 0.9805880549342038,
       "z": 1
     },
     "_quat": {
@@ -82,6 +82,9 @@
     "_components": [
       {
         "__id__": 12
+      },
+      {
+        "__id__": 13
       }
     ],
     "_prefab": null,
@@ -488,7 +491,6 @@
     "_enabled": true,
     "jumpHeight": 200,
     "jumpDuration": 0.3,
-    "maxMoveSpeed": 400,
     "accel": 350,
     "_id": "70l4oZzO1E/JHFJtnbqp97"
   },
@@ -505,8 +507,29 @@
       "width": 960,
       "height": 640
     },
-    "_fitWidth": false,
+    "_fitWidth": true,
     "_fitHeight": true,
     "_id": "e9leswu8hAcJ8EHNtwCtrb"
+  },
+  {
+    "__type__": "9e06e3vaj5ASLxdsDXvdNp0",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "starPrefab": {
+      "__uuid__": "8bfbf0f2-8818-4983-b565-96135537dcf3"
+    },
+    "maxStarDuration": 5,
+    "minStarDuration": 3,
+    "ground": {
+      "__id__": 7
+    },
+    "player": {
+      "__id__": 9
+    },
+    "_id": "504Jo1NeRBhJhOQDULkru9"
   }
 ]
