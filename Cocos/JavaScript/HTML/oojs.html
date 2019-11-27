@@ -1,0 +1,52 @@
+<!CTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Object-oriented JavaScript example</title>
+</head>
+
+<body>
+  <p>requires you to enter commands in your browser's JavaScript console (see <a
+
+</body>
+<script>
+    var person ={
+        name : ['Bob', 'Smith'],
+        age : 32,
+        gender : 'male',
+        interests : ['music', 'skiing'],
+        bio: function () {
+            alert(this.name[0] + '' + this.name[1] + 'is' + this.age +' years old. He likes ' + this.interests[0] + 'and' + this.interests[1] +' . ');
+        },
+        greeting: function(){
+            alert('Hi! I\'m '+ this.name[0] + '.');
+        },
+    };
+    person['name']['last'] = 'ahao'
+    person.farewell =function () {alert(' Bye everyBody !')};
+
+    // 实例函数
+    function Person(name){
+        this.name = name;
+        this.greeting = function(){
+            alert('Hi ! I \'m ' + this.name + '.');
+        }
+    };
+    // 使用 Person 实例函数创建的构造函数
+    var person1 = new Person('Bob');
+    var person2 = new Person('ahao');
+
+    console.log(person1.name,person1.greeting());
+    console.log(person2.name,person2.greeting());
+    var personAhao = new Object({
+        name : 'aa',
+        age : 38,
+        guncGet : function (){
+            alert('aaa',this.name);
+        },
+    });
+    var ahao2 = Object.create(personAhao);
+
+</script> 
+</html>

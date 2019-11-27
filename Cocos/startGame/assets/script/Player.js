@@ -2,6 +2,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        // 第二个主角
+        playerTwo : cc.Node, 
         // 主角跳跃高度
         jumpHeight: 0,
         // 主角跳跃持续时间
@@ -19,7 +21,15 @@ cc.Class({
         var jumpDown = cc.moveBy(this.jumpDuration, cc.v2(0,-this.jumpHeight)).easing(cc.easeCubicActionOut());
         // 不断重复
         return cc.repeatForever(cc.sequence(jumpUp,jumpDown));
-
+    },
+    // 跳跃方法 playerTwo
+    setJumpActionTwo() {
+        // 跳跃上升
+        var jumpUp = cc.moveBy(this.jumpDuration, cc.v2(0,this.jumpHeight));
+        // 下落
+        var jumpDown = cc.moveBy(this.jumpDuration, cc.v2(0,-this.jumpHeight));
+        // 不断重复
+        return cc.repeatForever(cc.sequence(jumpUp,jumpDown));
     },
 
     // 添加键盘触发事件
@@ -47,6 +57,8 @@ cc.Class({
         // onLoad总开启跳跃
         this.jumpAction = this.setJumpAction();
         this.node.runAction(this.jumpAction);
+        // 
+        //this.playerTwo.runAction(this.setJumpActionTwo());
         // 加速方向开关
         this.accLeft = false;
         this.accRight = false;

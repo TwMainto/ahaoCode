@@ -10,7 +10,6 @@ cc.Class({
         // 更具 player 节点位置判断距离
         var playerPos = this.game.player.getPosition();
         var dist = this.node.position.sub(playerPos).mag();
-        console.log(" 两个相距的距离 ... ",dist);
         return dist;
     },
 
